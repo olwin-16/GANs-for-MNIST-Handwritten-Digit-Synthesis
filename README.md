@@ -1,4 +1,6 @@
 # GANs-for-MNIST-Handwritten-Digit-Synthesis
 
-<img width="1213" height="529" alt="image" src="https://github.com/user-attachments/assets/b183b99c-9644-4f38-b850-e3e4d39395cc" />
+
+<img width="860" height="375" alt="image" src="https://github.com/user-attachments/assets/5fbd439e-a893-40bc-9966-459372135ace" />
+
 
