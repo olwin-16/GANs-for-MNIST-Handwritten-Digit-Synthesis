@@ -94,7 +94,9 @@ Losses tracked and shown epoch-wise along with generated sample images.
 
 ## Sample Training Output
 
-Epoch-wise losses show gradual improvement, with generated digits becoming more realistic as training progresses.
+Generated handwritten digits after final training epoch. Each digit is synthesized by the Generator network from random noise vectors.
+
+<img width="355" height="338" alt="image" src="https://github.com/user-attachments/assets/c799f617-5622-4348-b5ad-a3a13ba475c4" />
 
 ## Setup & Installation
 
