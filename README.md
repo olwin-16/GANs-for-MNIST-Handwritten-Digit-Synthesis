@@ -117,4 +117,4 @@ This project is licensed under the **MIT License**.
 
 ## Contact
 
-For questions or contributions, create an issue or reach out via email [Email Text](mailto:olwinchristian1626@gmail.com).
+For questions or contributions, create an issue or reach out via [Email](mailto:olwinchristian1626@gmail.com).
