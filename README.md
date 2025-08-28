@@ -1,5 +1,4 @@
-# MNIST-Classification-using-GANs
+# GANs-for-MNIST-Handwritten-Digit-Synthesis
 
-This project demonstrates how to use a Generative Adversarial Network (GAN) for generating images and classifying handwritten digits from the MNIST dataset. The GAN consists of a generator and a discriminator, where the generator creates realistic images, and the discriminator distinguishes between real and generated images.
-
+<img width="1213" height="529" alt="image" src="https://github.com/user-attachments/assets/b183b99c-9644-4f38-b850-e3e4d39395cc" />
 
