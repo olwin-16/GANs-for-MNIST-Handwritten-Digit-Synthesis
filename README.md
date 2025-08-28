@@ -8,11 +8,9 @@ This project implements a Generative Adversarial Network (GAN) using PyTorch to 
 
 ## Project Structure
 
-**Main Notebook / Scripts:** Code for training both generator and discriminator, visualizing outputs, and evaluating model performance.
+**Main Script:** Single code file containing both generator and discriminator definitions, data loading, training loop, visualization utilities, and evaluation.
 
 **Dataset Loader:** Loads MNIST data and applies random rotation augmentation for improved generalization.
-
-**Discriminator Network:** Convolutional architecture defined in PyTorch as described below.
 
 **Visualization Utilities:** Functions for displaying results and batch samples directly in the notebook.
 
@@ -94,11 +92,25 @@ Epoch-wise losses show gradual improvement, with generated digits becoming more 
 
 ## Setup & Installation
 
+### Clone the repository:
+
 ```bash
-git clone https://github.com/olwin-16/GANs-for-MNIST-Handwritten-Digit-Synthesis.git
-pip install torch torchvision matplotlib tqdm torchsummary
+git clone https://github.com/your-username/GANs-for-MNIST-Handwritten-Digit-Synthesis.git
+cd GANs-for-MNIST-Handwritten-Digit-Synthesis
+```
+
+### Install required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the main script:
+
+```bash
 python gan_mnist.py
 ```
+
 ## License
 
 This project is licensed under the **MIT License**.
