@@ -1,4 +1,4 @@
-# GANs for MNIST Handwritten Digit Synthesis
+#  Generative Adversarial Networks for MNIST Handwritten Digit Synthesis
 
 <br>
 <br>
