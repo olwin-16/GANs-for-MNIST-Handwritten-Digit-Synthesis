@@ -32,6 +32,20 @@ The MNIST dataset was originally published by Yann LeCun and colleagues and is p
 
 The discriminator is a deep convolutional neural network designed to classify images as "real" (from MNIST) or "fake" (generated). The key details are:
 
+| Layer          | Output Shape     | Parameters | Description                              |
+|----------------|------------------|------------|------------------------------------------|
+| Conv2d (1→16)  | [-1, 16, 13, 13] | 160        | 3x3 kernel, stride 2, feature extraction |
+| BatchNorm2d    | [-1, 16, 13, 13] | 32         | Normalizes intermediate features         |
+| LeakyReLU      | [-1, 16, 13, 13] | 0          | Non-linear activation (α=0.2)            |
+| Conv2d (16→32) | [-1, 32, 5, 5]   | 12,832     | 5x5 kernel, stride 2, deeper features    |
+| BatchNorm2d    | [-1, 32, 5, 5]   | 64         | Normalizes intermediate features         |
+| LeakyReLU      | [-1, 32, 5, 5]   | 0          | Non-linear activation                    |
+| Conv2d (32→64) | [-1, 64, 1, 1]   | 51,264     | 5x5 kernel, stride 2, global features    |
+| BatchNorm2d    | [-1, 64, 1, 1]   | 128        | Normalizes global features               |
+| LeakyReLU      | [-1, 64, 1, 1]   | 0          | Non-linear activation                    |
+| Flatten        | [-1, 64]         | 0          | Flattens output to vector                |
+| Linear (64→1)  | [-1, 1]          | 65         | Single output: real/fake score           |
+
 <img width="413" height="345" alt="image" src="https://github.com/user-attachments/assets/206eb241-8930-4e4d-98b8-3ee842a829df" />
 
 ## Purpose
@@ -43,8 +57,22 @@ Architecture is robust to MNIST format (single channel, 28x28 images) and levera
 
 The generator creates realistic handwritten digit images from random noise vectors (z_dim = 64)  It employs transposed convolutions to progressively upsample noise into images:
 
-<img width="418" height="345" alt="image" src="https://github.com/user-attachments/assets/ca34eb3d-5485-4bc4-b55f-88a44c2d0b20" />
+| Layer                     | Output Shape      | Parameters | Description                     |
+|---------------------------|-------------------|------------|---------------------------------|
+| ConvTranspose2d (64→256)  | [-1, 256, 3, 3]   | 147,712    | Project noise to feature map    |
+| BatchNorm2d               | [-1, 256, 3, 3]   | 512        | Feature normalization           |
+| ReLU                      | [-1, 256, 3, 3]   | 0          | Activation                      |
+| ConvTranspose2d (256→128) | [-1, 128, 6, 6]   | 524,416    | Upsample and refine features    |
+| BatchNorm2d               | [-1, 128, 6, 6]   | 256        | Feature normalization           |
+| ReLU                      | [-1, 128, 6, 6]   | 0          | Activation                      |
+| ConvTranspose2d (128→64)  | [-1, 64, 13, 13]  | 73,792     | Upsample                        |
+| BatchNorm2d               | [-1, 64, 13, 13]  | 128        | Feature normalization           |
+| ReLU                      | [-1, 64, 13, 13]  | 0          | Activation                      |
+| ConvTranspose2d (64→1)    | [-1, 1, 28, 28]   | 1,025      | Final image formation           |
+| Tanh                      | [-1, 1, 28, 28]   | 0          | Output normalization [-1,1]     |
 
+<img width="418" height="345" alt="image" src="https://github.com/user-attachments/assets/ca34eb3d-5485-4bc4-b55f-88a44c2d0b20" />
+ 
 ## Training & Optimization
 
 ### Loss Functions:
@@ -73,6 +101,8 @@ python gan_mnist.py
 ## License
 
 This project is licensed under the **MIT License**.
+
+
 
 ## Contact
 
