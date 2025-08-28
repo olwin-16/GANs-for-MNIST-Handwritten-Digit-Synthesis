@@ -46,7 +46,7 @@ The discriminator is a deep convolutional neural network designed to classify im
 | Flatten        | [-1, 64]         | 0          | Flattens output to vector                |
 | Linear (64→1)  | [-1, 1]          | 65         | Single output: real/fake score           |
 
-<img width="413" height="345" alt="image" src="https://github.com/user-attachments/assets/206eb241-8930-4e4d-98b8-3ee842a829df" />
+**Total Trainable Parameters:** 64,545
 
 ## Purpose
 
@@ -71,14 +71,16 @@ The generator creates realistic handwritten digit images from random noise vecto
 | ConvTranspose2d (64→1)    | [-1, 1, 28, 28]   | 1,025      | Final image formation           |
 | Tanh                      | [-1, 1, 28, 28]   | 0          | Output normalization [-1,1]     |
 
-<img width="418" height="345" alt="image" src="https://github.com/user-attachments/assets/ca34eb3d-5485-4bc4-b55f-88a44c2d0b20" />
- 
+**Total Trainable Parameters:** 747,841
+
 ## Training & Optimization
 
 ### Loss Functions:
 
 **Discriminator:** BCEWithLogitsLoss for real (label=1) and fake (label=0) images.
+
 **Generator:** BCEWithLogitsLoss to encourage generating images that fool the discriminator.
+
 **Optimizers:** Adam with learning rate 0.002, betas (0.5, 0.99)
 
 ### Training Details:
@@ -101,8 +103,6 @@ python gan_mnist.py
 ## License
 
 This project is licensed under the **MIT License**.
-
-
 
 ## Contact
 
