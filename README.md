@@ -95,7 +95,7 @@ Epoch-wise losses show gradual improvement, with generated digits becoming more 
 ### Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/GANs-for-MNIST-Handwritten-Digit-Synthesis.git
+git clone https://github.com/olwin-16/GANs-for-MNIST-Handwritten-Digit-Synthesis.git
 cd GANs-for-MNIST-Handwritten-Digit-Synthesis
 ```
 
