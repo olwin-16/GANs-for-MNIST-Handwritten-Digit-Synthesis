@@ -94,12 +94,11 @@ Epoch-wise losses show gradual improvement, with generated digits becoming more 
 
 ## Setup & Installation
 
-git clone [https://github.com/olwin-16/GANs-for-MNIST-Handwritten-Digit-Synthesis.git](https://github.com/olwin-16/MNIST-Classification-using-GANs)
-
+```bash
+git clone https://github.com/olwin-16/GANs-for-MNIST-Handwritten-Digit-Synthesis.git
 pip install torch torchvision matplotlib tqdm torchsummary
-
 python gan_mnist.py
-
+```
 ## License
 
 This project is licensed under the **MIT License**.
