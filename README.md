@@ -9,16 +9,23 @@ This project implements a Generative Adversarial Network (GAN) using PyTorch to 
 ## Project Structure
 
 **Main Notebook / Scripts:** Code for training both generator and discriminator, visualizing outputs, and evaluating model performance.
+
 **Dataset Loader:** Loads MNIST data and applies random rotation augmentation for improved generalization.
+
 **Discriminator Network:** Convolutional architecture defined in PyTorch as described below.
+
 **Visualization Utilities:** Functions for displaying results and batch samples directly in the notebook.
 
 ## Dataset Details
 
-**Source:** The MNIST dataset was originally published by Yann LeCun and colleagues and is publicly available at [MNIST Dataset](http://yann.lecun.com/exdb/mnist/).
+The MNIST dataset was originally published by Yann LeCun and colleagues and is publicly available at [MNIST Dataset](http://yann.lecun.com/exdb/mnist/).
+
 **Format:** 28x28 grayscale images of handwritten digits (0-9)
+
 **Augmentation:** Random rotation (-20° to +20°) applied on-the-fly
+
 **Training Split:** 60,000 images, used as training set
+
 **Batch Size:** 128, leading to 469 batches per epoch
 
 ## Discriminator Network Architecture
@@ -57,7 +64,7 @@ Epoch-wise losses show gradual improvement, with generated digits becoming more 
 
 ## Setup & Installation
 
-git clone https://github.com/olwin-16/GANs-for-MNIST-Handwritten-Digit-Synthesis.git
+git clone [https://github.com/olwin-16/GANs-for-MNIST-Handwritten-Digit-Synthesis.git](https://github.com/olwin-16/MNIST-Classification-using-GANs)
 
 pip install torch torchvision matplotlib tqdm torchsummary
 
@@ -69,4 +76,4 @@ This project is licensed under the **MIT License**.
 
 ## Contact
 
-For questions or contributions, create an issue or reach out via email - olwinchristian1626@gmail.com.
+For questions or contributions, create an issue or reach out via email [Email Text](mailto:olwinchristian1626@gmail.com).
